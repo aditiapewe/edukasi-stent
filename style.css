@@ -7,9 +7,8 @@
   --text: #0A3543;
   --muted: #6B7A76;
   --card: #FFFFFF;
-  --danger: #E94B35;
   --radius: 12px;
-  --max-width: 900px;
+  --max-width: 960px;
 }
 
 /* Reset */
@@ -29,9 +28,14 @@ body{
 .container{max-width:var(--max-width);margin:16px auto;padding:0 16px}
 
 /* Topbar */
-.topbar{background:linear-gradient(90deg,var(--emerald),var(--emerald-2));color:white;padding:20px;border-radius:16px}
+.topbar{background:linear-gradient(90deg,var(--emerald),var(--emerald-2));color:white;padding:14px;border-radius:12px}
+.topbar.small-top{padding:10px;margin-bottom:12px}
 .brand{font-size:18px;margin-bottom:6px}
 .tag{opacity:0.95;font-size:13px}
+
+/* Nav */
+.nav-row{display:flex;align-items:center;justify-content:space-between}
+.nav-right .nav-link{color:rgba(255,255,255,0.92);text-decoration:none;margin-left:12px;font-weight:600}
 
 /* Cards */
 .card{background:var(--card);padding:16px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,20,20,0.06);margin-bottom:14px}
@@ -43,7 +47,7 @@ body{
 @media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}
 
 /* Buttons */
-.btn{display:inline-block;padding:12px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer;text-align:center}
+.btn{display:inline-block;padding:12px 14px;border-radius:10px;border:0;font-weight:600;cursor:pointer;text-align:center;text-decoration:none}
 .btn.full{width:100%}
 .btn.primary{background:var(--emerald);color:white}
 .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.12);color:white}
@@ -52,16 +56,48 @@ body{
 .btn-row{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
 
 /* Video wrap */
-.video-wrap{background:#000;border-radius:10px;overflow:hidden}
+.video-card{
+  margin-top:12px;
+}
+.yt-wrap{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    background:#000;
+    cursor:pointer;
+    border-radius:12px;
+    overflow:hidden;
+}
+.yt-wrap .thumb{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+.yt-wrap .play-button{
+    width:70px;
+    height:70px;
+    background:rgba(255,255,255,.92);
+    border-radius:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow:0 6px 18px rgba(0,0,0,0.2);
+}
+.yt-wrap .play-button:before{
+    content:'';
+    position:absolute;
+    left:27px;
+    top:22px;
+    border-style:solid;
+    border-width:16px 0 16px 26px;
+    border-color:transparent transparent transparent #222;
+}
 
-/* Typography */
-h1,h2,h3,h4{color:var(--text)}
-h3{margin-bottom:8px}
-p{color:var(--muted);margin-top:6px}
-
-/* Material detail */
-.hidden{display:none}
-#material-content{padding-top:8px}
+/* Material */
+.material-list h4{margin-top:12px}
+.material-list p{color:var(--muted)}
 
 /* QnA */
 label{display:block;margin-bottom:6px;font-weight:600}
@@ -71,5 +107,11 @@ textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #E6EEEA;resi
 /* Footer */
 .site-footer{margin-top:10px;text-align:center;color:var(--muted);font-size:13px}
 
-/* small helpers */
-.small{font-size:13px}
+/* Home button small icon style for header nav */
+.home-ico{margin-right:6px}
+
+/* responsive tweaks */
+@media(max-width:480px){
+  .grid{grid-template-columns:repeat(1,1fr)}
+  .nav-right{display:none}
+}

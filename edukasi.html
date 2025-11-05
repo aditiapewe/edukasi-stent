@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Edukasi Jantung — Edukasi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar small-top">
+    <div class="container nav-row">
+      <div class="brand-wrap">
+        <h1 class="brand small">Edukasi Jantung</h1>
+      </div>
+      <nav class="nav-right">
+        <a href="index.html" class="nav-link"><span class="home-ico">🏠</span> Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="edu" class="card">
+      <h3>Video Edukasi: Pahami Stent dan Hidup Sehat Setelah PCI</h3>
+      <p>Tekan gambar untuk memutar video. Setelah menonton, baca materi dan lakukan Post-Test.</p>
+
+      <div class="video-card">
+        <div class="yt-wrap" data-youtube-id="RwP7P71Likw">
+          <img class="thumb" src="646293aa-35a1-4052-b221-25592b9830d1.png" alt="Thumbnail Video">
+          <div class="play-button"></div>
+        </div>
+      </div>
+
+      <div class="material-list">
+        <h4>Apa Itu Stent?</h4>
+        <p>Stent adalah rangka logam kecil yang dipasang pada pembuluh jantung untuk menjaga pembuluh tetap terbuka. Stent tidak dapat berpindah posisi dan tidak berkarat.</p>
+
+        <h4>Apa Itu PCI?</h4>
+        <p>PCI adalah tindakan medis untuk membuka sumbatan pada pembuluh jantung menggunakan kateter, balon, dan pemasangan stent.</p>
+
+        <h4>Obat Antiplatelet (DAPT)</h4>
+        <p>Obat antiplatelet membantu mencegah pembekuan darah setelah pemasangan stent. Penting untuk minum obat sesuai anjuran dokter.</p>
+      </div>
+
+      <div class="btn-row">
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSe9cCmO41W8hnUgWQJGyHP2EH-TtWXMZLFkeGbMQpiV4dI-vw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">Buka Post-Test</a>
+        <a class="btn outline" href="index.html">Kembali ke Beranda</a>
+      </div>
+    </section>
+
+    <section id="diskusi" class="card">
+      <h3>Diskusi & Tanya Jawab (via WhatsApp)</h3>
+      <p>Masukkan pertanyaan Anda. Klik tombol kirim untuk membuka WhatsApp dan mengirimkan pertanyaan kepada tim edukasi.</p>
+      <form id="qnaForm">
+        <label for="qtext">Tulis pertanyaan Anda</label>
+        <textarea id="qtext" rows="4" placeholder="Contoh: Setelah pasang stent, kapan boleh olahraga?" required></textarea>
+        <div class="btn-row">
+          <button type="submit" class="btn primary">Kirim via WhatsApp</button>
+          <button type="button" id="clearLocal" class="btn outline">Bersihkan</button>
+        </div>
+      </form>
+      <p class="small">Catatan: Saat ini fitur mengarahkan ke WhatsApp. Nomor penerima default adalah <strong>+62XXXXXXXXXXX</strong>. Mohon ganti dengan nomor PIC yang benar.</p>
+      <div id="sentList" class="qna-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Rumah Sakit Hermina Depok — Program Edukasi Pasca-PCI</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

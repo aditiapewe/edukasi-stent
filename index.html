@@ -3,122 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Edukasi Pasca-PCI — Pahami Stent & DAPT</title>
+  <title>Edukasi Jantung</title>
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Portal edukasi multimedia untuk pasien pasca-PCI: video, materi, pre-test & post-test." />
+  <meta name="description" content="Portal edukasi multimedia pasca-PCI: video, materi, pre-test & post-test." />
 </head>
 <body>
   <header class="topbar">
-    <div class="container">
-      <h1 class="brand">Pahami Stent & Hidup Sehat</h1>
-      <p class="tag">Edukasi multimedia pasca-PCI — Rumah Sakit Hermina Depok</p>
+    <div class="container nav-row">
+      <div class="brand-wrap">
+        <h1 class="brand">Edukasi Jantung</h1>
+        <p class="tag">Program Edukasi Pasca-PCI — Rumah Sakit Hermina Depok</p>
+      </div>
+      <nav class="nav-right">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="edukasi.html" class="nav-link">Edukasi</a>
+      </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Hero / Card -->
     <section id="home" class="card hero-card">
       <h2>Selamat datang</h2>
       <p>Portal edukasi singkat tentang stent, prosedur PCI, dan pentingnya minum obat antiplatelet setelah pemasangan stent.</p>
       <div class="btn-row">
-        <button id="btn-pretest" class="btn primary">Mulai Pre-Test</button>
-        <a id="btn-skip" class="btn ghost" href="#edu">Lewati ke Edukasi</a>
+        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLSezYvqXQKfBXaV6RNOGaREKJQOjq0H5_coptBXePXwO33HhKA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Mulai Pre-Test</a>
+        <a class="btn outline" href="edukasi.html">Masuk ke Edukasi</a>
       </div>
     </section>
 
-    <!-- Pre-test notice -->
-    <section id="pretest" class="card">
-      <h3>Pre-Test (10 pertanyaan)</h3>
-      <p>Silakan klik tombol di bawah untuk membuka Pre-Test di tab baru. Setelah selesai, kembali ke portal untuk belajar.</p>
-      <div class="btn-row">
-        <!-- Replace the href with your Google Form pre-test link -->
-        <a id="link-pretest" class="btn primary" href="https://docs.google.com/forms/d/PLACEHOLDER_PRETEST" target="_blank" rel="noopener noreferrer">Buka Pre-Test (Google Form)</a>
-        <button id="btn-to-edu" class="btn outline">Selesai Pre-Test — Kembali ke Edukasi</button>
-      </div>
+    <section class="card">
+      <h3>Mengapa edukasi ini penting?</h3>
+      <p>Intervensi ini membantu pasien memahami fungsi stent, pentingnya obat antiplatelet, dan gaya hidup yang mendukung pemulihan.</p>
     </section>
 
-    <!-- Education Portal -->
-    <section id="edu" class="card">
-      <h3>Portal Edukasi</h3>
-      <p>Pilih topik yang ingin Anda pelajari.</p>
-
+    <section class="card">
+      <h3>Materi singkat</h3>
       <div class="grid">
-        <div class="card small-card">
-          <h4>Video Edukasi</h4>
-          <p>Animasi singkat proses PCI & fungsi stent.</p>
-          <!-- Replace the src with your YouTube embed link (iframe src). -->
-          <div class="video-wrap">
-            <iframe id="yt-video" width="100%" height="220" src="https://www.youtube.com/embed/PLACEHOLDER_YOUTUBE" title="Video Edukasi" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <button class="btn outline" onclick="document.getElementById('yt-video').scrollIntoView({behavior:'smooth'})">Tonton Video</button>
-        </div>
-
-        <div class="card small-card">
-          <h4>Apa Itu Stent?</h4>
-          <p>Penjelasan singkat: stent menjaga pembuluh tetap terbuka, tidak berpindah, dan tidak berkarat.</p>
-          <button class="btn outline" onclick="openMaterial('stent')">Baca Selengkapnya</button>
-        </div>
-
-        <div class="card small-card">
-          <h4>Apa Itu PCI?</h4>
-          <p>Prosedur memasukkan selang kecil untuk membuka sumbatan dengan balon dan stent.</p>
-          <button class="btn outline" onclick="openMaterial('pci')">Baca Selengkapnya</button>
-        </div>
-
-        <div class="card small-card">
-          <h4>Obat Antiplatelet (DAPT)</h4>
-          <p>Peran obat: mencegah pembekuan yang bisa menutup kembali stent.</p>
-          <button class="btn outline" onclick="openMaterial('dapt')">Baca Selengkapnya</button>
-        </div>
-
-        <div class="card small-card">
-          <h4>Miskonsepsi</h4>
-          <p>Topik umum: stent tidak sama dengan sembuh total, stent tidak pindah.</p>
-          <button class="btn outline" onclick="openMaterial('miskonsepsi')">Baca Selengkapnya</button>
-        </div>
-
-        <div class="card small-card">
-          <h4>Diskusi & Tanya Jawab</h4>
-          <p>Tulis pertanyaan Anda — tim edukasi akan membalas.</p>
-          <button class="btn outline" onclick="document.getElementById('diskusi').scrollIntoView({behavior:'smooth'})">Tanya Sekarang</button>
-        </div>
+        <div class="small-card"><h4>Apa Itu Stent?</h4><p>Stent menjaga pembuluh tetap terbuka. Bukan obat yang menyembuhkan penyakit.</p></div>
+        <div class="small-card"><h4>Apa Itu PCI?</h4><p>Prosedur membuka sumbatan pembuluh dengan balon dan stent.</p></div>
+        <div class="small-card"><h4>Obat Antiplatelet</h4><p>Obat yang mencegah pembekuan di sekitar stent. Minum sesuai anjuran dokter.</p></div>
       </div>
     </section>
 
-    <!-- Material detail area (hidden by default) -->
-    <section id="material-detail" class="card hidden">
-      <button id="btn-back" class="btn ghost small">‹ Kembali</button>
-      <div id="material-content"></div>
-    </section>
-
-    <!-- Diskusi -->
-    <section id="diskusi" class="card">
-      <h3>Diskusi & Tanya Jawab</h3>
-      <p>Masukkan pertanyaan Anda. Pertanyaan akan direkam lokal (tanpa login). Untuk saat ini jawaban dapat di-follow up oleh tim melalui protokol RS.</p>
-      <form id="qna-form">
-        <label for="qna-text">Tulis pertanyaan Anda</label>
-        <textarea id="qna-text" rows="4" placeholder="Tulis pertanyaan Anda di sini..." required></textarea>
-        <div class="btn-row">
-          <button type="submit" class="btn primary">Kirim Pertanyaan</button>
-          <button type="button" id="btn-clear-q" class="btn outline">Bersihkan</button>
-        </div>
-      </form>
-      <div id="qna-list" class="qna-list"></div>
-    </section>
-
-    <!-- Post-Test -->
-    <section id="posttest" class="card">
-      <h3>Post-Test (Evaluasi)</h3>
-      <p>Setelah menekan tombol di bawah, Post-Test akan terbuka di tab baru. Silakan kembali ke portal setelah selesai.</p>
-      <!-- Replace the href with your Google Form post-test link -->
-      <a id="link-posttest" class="btn primary" href="https://docs.google.com/forms/d/PLACEHOLDER_POSTTEST" target="_blank" rel="noopener noreferrer">Buka Post-Test (Google Form)</a>
-    </section>
-
-    <!-- Finish -->
-    <section id="finish" class="card">
-      <h3>Terima Kasih</h3>
-      <p>Terima kasih telah mengikuti edukasi. Tetap minum obat sesuai anjuran dokter dan kontrol rutin.</p>
-      <button id="btn-restart" class="btn outline">Kembali ke Beranda</button>
+    <section class="card small-note">
+      <h4>Siap melanjutkan?</h4>
+      <p>Jika sudah siap, <a href="https://docs.google.com/forms/d/e/1FAIpQLSezYvqXQKfBXaV6RNOGaREKJQOjq0H5_coptBXePXwO33HhKA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">klik Pre-Test</a> terlebih dahulu. Setelah selesai, kembali ke edukasi lalu buka Post-Test.</p>
     </section>
   </main>
 
